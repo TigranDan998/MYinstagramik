@@ -1,0 +1,41 @@
+{% extends 'core/layout.html' %}
+
+{% load static %}
+
+
+{% block title %}
+
+ДОБАВИТЬ НОВОСТЬ
+
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="headtitle"> ДОБАВИТЬ НОВОСТЬ </h1>
+
+<div class='headtitle'>
+
+<form method="post" enctype="multipart/form-data">
+
+ {% csrf_token %}
+
+<input type='text' placeholder='Название статьи' name='title'> <br>
+
+<input type='text' placeholder='Анонс статьи' name="anons"> <br>
+
+<textarea placeholder='Текст Статьи' name="full_text"> </textarea> <br>
+
+<input type='date' name="date"> <br>
+
+<input type='time'> <br>
+
+ <input type="file" name="image"><br>
+
+<button type='submit'>Добавить статью </button>
+
+</form>
+
+</div>
+
+{% endblock %}

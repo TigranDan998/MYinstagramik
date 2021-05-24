@@ -1,0 +1,41 @@
+{% extends 'core/layout.html' %}
+
+{% load static %}
+
+
+{% block title %}
+
+НОВОСТИ НАШЕГО ИНСТАГРАММА
+
+{% endblock %}
+
+{% block content %}
+
+<p class="headtitle"> НОВОСТИ НАШЕГО ИНСТАГРАММА </p>
+
+{% for i in newsobject %}
+
+<article>
+
+<div class="new">
+
+<img class='img' src="{{i.image.url}}">
+
+<div class='text'>
+
+<h3><a class='urls3' href="{% url 'news-detail' i.id %}">{{ i.title }} </h3></a>
+
+{{i.anons}}
+
+</div>
+
+</div>
+
+</article>
+
+
+{% endfor %}
+
+
+{% endblock %}
+

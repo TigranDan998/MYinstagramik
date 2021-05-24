@@ -1,0 +1,25 @@
+{% extends 'core/layout.html' %}
+
+{% block title %}
+
+Страница для удаления записи
+
+{% endblock %}
+
+{% block content %}
+
+<div class='headtitle'>
+
+<h1> Форма для удаления записи </h1>
+
+<form method="post">
+
+ {% csrf_token %}
+
+<button type='submit'>Удалить статью </button>
+
+</form>
+
+</div>
+
+{% endblock %}
